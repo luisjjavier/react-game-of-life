@@ -92,3 +92,17 @@ npm test
 ```
 
 This will run unit tests under `src/__tests__/*.test.ts` and validate simulation logic such as oscillators, underpopulation, and reproduction rules.
+## 🐳 Docker (Production Ready)
+
+1. **Build and run the container**:
+
+```bash
+docker build -t game-of-life .
+docker run -p 8080:80 game-of-life
+```
+
+2. **Open in browser:**
+
+```
+http://localhost:8080
+```
