@@ -63,31 +63,7 @@ Interval delay for continuous play is 200ms.
 
 ## 🧪 Tests
 
-To test the core logic of the Game of Life:
-
-1. **Install Jest and required dev dependencies:**
-
-```bash
-npm install --save-dev jest ts-jest @types/jest
-npx ts-jest config:init
-```
-
-2. **Update `jest.config.js` for ESM support** if you're using Vite or have "type": "module" in package.json:
-
-```js
-export default {
-  preset: 'ts-jest/presets/default-esm',
-  testEnvironment: 'node',
-  extensionsToTreatAsEsm: ['.ts'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  },
-};
-```
-
-3. **Run tests**:
+1. **Run tests**:
 
 ```bash
 npm test
