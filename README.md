@@ -14,6 +14,8 @@ This project is a front-end simulation of **Conway's Game of Life** built with *
 ## 📸 Demo
 
 > Click on cells to toggle their state. Use the controls to simulate life cycles.
+> ![img.png](docs/img.png)
+> ![img_1.png](docs/img_1.png)
 
 ## 📦 Tech Stack
 
