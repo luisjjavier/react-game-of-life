@@ -44,6 +44,7 @@ npm run dev
 
 ``` 
 src/
+├── __test__/          # for Jest tests
 ├── api/             # Game logic (acts as a mock API)
 ├── components/      # UI components (Board, Controls)
 ├── hooks/           # useGameOfLife hook
@@ -57,3 +58,37 @@ Board size is fixed at 25x25 by default.
 The game is implemented entirely on the frontend.
 
 Interval delay for continuous play is 200ms.
+
+## 🧪 Tests
+
+To test the core logic of the Game of Life:
+
+1. **Install Jest and required dev dependencies:**
+
+```bash
+npm install --save-dev jest ts-jest @types/jest
+npx ts-jest config:init
+```
+
+2. **Update `jest.config.js` for ESM support** if you're using Vite or have "type": "module" in package.json:
+
+```js
+export default {
+  preset: 'ts-jest/presets/default-esm',
+  testEnvironment: 'node',
+  extensionsToTreatAsEsm: ['.ts'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  },
+};
+```
+
+3. **Run tests**:
+
+```bash
+npm test
+```
+
+This will run unit tests under `src/__tests__/*.test.ts` and validate simulation logic such as oscillators, underpopulation, and reproduction rules.

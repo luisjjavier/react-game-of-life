@@ -8,7 +8,7 @@ const createEmptyGrid = (rows: number, cols: number): Grid =>
 export const useGameOfLife = (rows = 25, cols = 25) => {
     const [grid, setGrid] = useState<Grid>(() => createEmptyGrid(rows, cols));
     const [isRunning, setIsRunning] = useState(false);
-    const intervalRef = useRef<number | null>(null);
+    const intervalRef = useRef<any | null>(null);
 
     const toggleCell = (r: number, c: number) => {
         setGrid((g) => {
